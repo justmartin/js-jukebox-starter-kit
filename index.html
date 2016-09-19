@@ -6,19 +6,28 @@
 </head>
 	<body>
 
-		<audio src="assets/audio/i-got-you.mp3" controls>
-			<p>Your browser does not support the <code>audio</code> element </p>
-		</audio>
-		<br>
-		<button type="button" id="back-button">Back</button>
-		<button type="button" id="play-button">Play</button>
-		<button type="button" id="next-button">Next</button>
-		<br>
-		<button type="button" id="volume-down">-</button>
-		<button type="button" id="volume-up">+</button>
-		<br>
-		<button type="button" id="add-song">Upload</button>
+		<div id="song-name"></div>
 
+		<div>
+			<audio id="audio-player">
+				<p>Your browser does not support the <code>audio</code> element </p>
+			</audio>
+		</div>
+
+		<div>
+			<button type="button" id="play-button">Play</button>
+			<button type="button" id="stop-button">Stop</button>
+			<br>
+			<button type="button" id="back-button">Back</button>
+			<button type="button" id="next-button">Next</button>
+			<br>
+			<button type="button" id="volume-down">-</button>
+			<button type="button" id="volume-up">+</button>
+			<br>
+			<button type="button" id="add-song">Upload</button>
+		</div>
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 		<script type="text/javascript" src="assets/js/script.js"></script>
 	</body>
 </html>
