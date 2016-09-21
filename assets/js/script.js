@@ -75,17 +75,19 @@ function Jukebox() {
 	};
 
 	this.nextSong = function(songs) {
-		i = i + 1; //iterates to next song in array
-
-		$("#audio-player")[0].src = this.songs[i].source; //assigns source of audio tag based on array index
-		this.playSong(); //plays current indexed song
+		var arrayLength = this.songs.length; //defines array length
+		for (var i = 0; i < arrayLength; i++) { //handling ability to only loop till end of array
+		    $("#audio-player")[0].src = this.songs[i].source; //assigns source of audio tag based on array index
+			this.playSong(); //plays current indexed song
+		}
 	};
 
 	this.previousSong = function() {
-		i = i - 1; //iterates to previous song in array
-
-		$("#audio-player")[0].src = this.songs[i].source;
-		this.playSong();
+		var arrayLength = this.songs.length; //defines array length
+		for (var i = 0; i < arrayLength; i--) { //handling ability to only loop till beginning of array
+		    $("#audio-player")[0].src = this.songs[i].source; //assigns source of audio tag based on array index
+			this.playSong(); //plays current indexed song
+		}
 	};
 
 	this.turnVolumeDown = function() {
